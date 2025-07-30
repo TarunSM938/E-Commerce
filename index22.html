@@ -1,0 +1,417 @@
+pattren.c++<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourKart</title>
+    <link rel="stylesheet" href="style22.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>-+
+   <!-- Header Section -->
+<header>
+    <div class="container">
+        <div class="navbar">
+            
+            <div class="logo">
+                <a href="index22.html"><img src="pictures22/logo.jpg" alt=""></div></a>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index22.html">Home</a></li>
+                    <li><a href="products22.html">Products</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+           <a href=""><img src="pictures22/cart_17976154.png"  class="cart"></a> 
+            <img src="pictures22/menu_786193.png" class="menue" onclick="menutoggle()">
+        </div>
+        <div class="header-content">
+            <h1>Explore the Best Products for Your Lifestyle</h1>
+            <h3>Exclusive deals on high-quality items. Shop now and elevate your everyday experience.</h3>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+    </div>
+</header>
+
+<!-- Shop by Categories Section -->
+<section id="categories" class="featured-categories">
+    <h2 class="section-title">Shop by Categories</h2>
+    <div class="categories-grid">
+        <div class="category-card">
+            <img src="pictures22/big-dumbbells-white.jpg" alt="Fitness">
+            <h1>Fitness</h1>
+            <p>Fitness</p>
+        </div>
+        <div class="category-card">
+            <img src="pictures22/electronics.webp" alt="Electronics">
+            <p>Electronics</p>
+        </div>
+        <div class="category-card">
+            <img src="pictures22/home and app-67.jpg" alt="Home & Living">
+            <p>Home & Living</p>
+        </div>
+        <div class="category-card">
+            <img src="pictures22/fassion.avif" alt="Fashion">
+            <p>Fashion</p>
+        </div>
+        <div class="category-card">
+            <img src="pictures22/beauty productss.jpeg" alt="Beauty">
+            <p>Beauty</p>
+        </div>
+        <div class="category-card">
+            <img src="pictures22/Sports-products.png" alt="Sports">
+            <p>Sports</p>
+        </div>
+    </div>
+</section>
+
+<!-- Image Slider Section -->
+<div class="slider-container">
+    <div class="slider" id="slider">
+      <div class="slide">
+        <a href="#"><img src="pictures22/slide 1.webp" alt="Image 1"></a>
+      </div>
+      <div class="slide">
+        <a href=""><img src="pictures22/slider phone.png" alt="Image 2"></a>
+      </div>
+      <div class="slide">
+        <a href=""><img src="pictures22/slider ferniture.png" alt="Image 3"></a>
+      </div>
+      <div class="slide">
+       <a href=""><img src="pictures22/slider watch.png" alt="Image 4"></a>
+      </div>
+      <div class="slide">
+        <a href=""><img src="pictures22/slider daily needs.png" alt="Image 3"></a>
+      </div>
+    </div>
+    
+    <button class="slider-btn prev" id="prev">&#10094;</button>
+    <button class="slider-btn next" id="next">&#10095;</button>
+  </div>
+  
+
+<script>const slider = document.getElementById("slider");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    let index = 0;
+    function showSlide(index) {
+      const slides = document.querySelectorAll(".slide");
+      const totalSlides = slides.length;
+      const width = slides[0].offsetWidth;
+      slider.style.transform = `translateX(${-index * width}px)`;
+    }
+    prev.addEventListener("click", () => {
+      const slides = document.querySelectorAll(".slide");
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    });
+    next.addEventListener("click", () => {
+      const slides = document.querySelectorAll(".slide");
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    });
+    window.addEventListener("resize", () => showSlide(index));
+    showSlide(index);
+    
+    </script>
+
+
+    <!-- Top-Selling Products -->
+    <div class="small-container">
+        <h2 class="title">Top-Selling Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="puma-detailes.html"><img src="pictures22/top puma shoes.webp"></a>
+                <h4>Men White & Black Colourblocked IDP Sneakers</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$120.00</p>
+            </div>
+            <div class="col-4">
+                <a href="noise-detailes.html"><img src="pictures22/noise gold watch9_.jpg"></a>
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$150.00</p>
+            </div>
+            <div class="col-4">
+                <a href="i phone-detailes.html"><img src="pictures22/i phone .jpg"></a>
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$799.00</p>
+            </div>
+            <div class="col-4">
+                <a href="jacket-detailes.html"><img src="pictures22/jacket .jpg" ></a>
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$60.00</p>
+            </div>
+        </div>
+        <!-- latest -->
+        <h2 class="title">Latest  Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="pictures22/Latest Products1.jpg">
+                <h4>realme Buds Air 5 Truly Wireless in-Ear Earbuds with 50dB ANC</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$399.00</p>
+            </div>
+            <div class="col-4">
+                <img src="pictures22/Latest Products 2.jpg">
+                <h4>MuscleBlaze Biozyme Performance Whey Protein, (Informed Choice UK, Labdoor USA Certified)</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$299.00</p>
+            </div>
+            <div class="col-4">
+                <img src="pictures22/Latest Products 3.jpg">
+                <h4>Gym Hero Rubber Captain America Dumbbells Gym 10Kg Set / 10Kg×2 Piece/Bouncer Dumbell Pair/Exercise Dambal / 20Kg Weight</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$259.00</p>
+            </div>
+            <div class="col-4">
+                <img src="pictures22/Latest Products4,jpg.jpg" alt=>
+                <h4>Tiranga Outdoor D-8 Chairs Table Set 4+1 Wicker Patio Furniture Sets 4 Chair and 1 Table with Cushions for Garden Balcony Bedroom</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$599.00</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="pictures22/Latest Products5.jpg" alt=>
+                <h4>GM 3060 E-Book 4 + 1 Power Strip Red & White Color 250 Volts with Master Switch, Indicator, Safety Shutter </h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$69.00</p>
+            </div>
+            <div class="col-4">
+                <img src="pictures22/Latest Products6.jpg">
+                <h4>Lotus Herbals Youth Rx Anti-Aging Skin Care Range Lotus Herbals Youth Rx Anti-Aging Transforming Cream Spf 25, Pa +++- 50G</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$29.00</p>
+            </div>
+            <div class="col-4">
+                <img src="pictures22/Latest Products7.jpg">
+                <h4>Office Table for Home/Writing Desk for Office/Folding Table for School/Folding Study Table/Work from Home - MultipurposeTable</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>$499.00</p>
+            </div>
+            <div class="col-4">
+                <img src="pictures22/latest products 8.webp">
+                <h4>Samsung Galaxy S23 Ultra 5G AI Smartphone (Green, 12GB, 256GB Storage)</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>$899.00</p>
+            </div>
+        </div>
+    </div>
+<!-- OFFER -->
+<div class="offer">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-2">
+                <img src="pictures22/Exclusiv.jpg"class="offer-img">
+            </div>
+            <div class="col-2">
+                <p>Exclusively Available On <strong>YourKart</strong></p>
+                <h1>Samsung Galaxy Watch Ultra</h1>
+                <small>The smart band features an AMOLED display, advanced tracking, and more to keep you connected and fit. Upto 100h Battery | 3nm Processor | Dual GPS | Quick Button/Siren | Sapphire Glass & Titanium | 10ATM & IP68 | BP & ECG Monitor | Energy Score & Ages</small>
+                <a href="#" class="btn">Buy Now &#8594;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- review -->
+<div class="testimonial">
+    <div class="samll-container">
+        <div class="row">
+            <div class="col-3">
+                
+                <i class="fa-solid fa-quote-left"></i>
+                <p> "I’ve been using the Galaxy Watch Ultra for a few weeks, and it’s exceeded my expectations. The battery life is fantastic—I can go almost three days on a single charge. The fitness tracking options are comprehensive, and the GPS accuracy is top-notch. However, the watch is a bit bulky, so it might not suit everyone’s style.</p>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <img src="pictures22/reveiw 1.jpg">
+                <h3>Diwaker </h3>
+            </div>
+            <div class="col-3">
+                <i class="fa-solid fa-quote-left"></i>
+                <p> This watch is a game-changer for fitness enthusiasts. It tracks everything from heart rate to advanced workout metrics with ease. The titanium build feels durable, and the rotating bezel is a nice touch. It’s also water-resistant, so no worries about wearing it while swimming. Definitely worth the investment!</p>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-BwD1xP_U7zsjzZA1-o4rkul31vjtab_mvw&s">
+                <h3>priya</h3>
+            </div>  <div class="col-3">
+                <i class="fa-solid fa-quote-left"></i>       
+                 <p> The Samsung Galaxy Watch Ultra is a masterpiece in design and functionality. The build quality is rugged yet stylish, making it perfect for both outdoor adventures and everyday use. The health and fitness tracking features are incredibly accurate, and the display is stunning, even under direct sunlight. A must-have for tech enthusiasts!</p>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <img src="https://png.pngtree.com/background/20230525/original/pngtree-one-more-time-with-the-girl-art-wallpaper-black-and-white-picture-image_2735343.jpg">
+                <h3>Sham</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- brands -->
+<div class="brands">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-5">
+                <img src="pictures22/oneplus.png">
+            </div>
+            <div class="col-5">
+                <img src="pictures22/realme.png">
+            </div>
+            <div class="col-5">
+                <img src="pictures22/MB LOGO.png">
+            </div>
+            <div class="col-5">
+                <img src="pictures22/nikes.png">
+            </div>
+            <div class="col-5">
+                <img src="pictures22/puma.png">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download your app</h3>
+                <p>download a app in android and ios mobile phone</p>
+                <div class="app-logo">
+                    <img src="pictures22/play storepng.png">
+                    <img src="pictures22/app store.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="pictures22/logo.jpg">
+                <p>our purpose is to sustainable to make the plesur and benefitsof sports accessible to many</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Usefull links</h3>
+                <ul>
+                <li>coupons</li>
+                <li>blog Policy</li>
+                <li>Return Policy</li>
+                <li>Join Affilitate</li>
+            </ul>
+            </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebok</li>
+                        <li>twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+    <hr>
+        <p class="Copyright">Copyright 2025 - YourKart</p>
+</div>
+<!-- js for toggle menu -->
+ <script>
+    var MenuItems=document.getElementById("MenuItems");
+    MenuItems.style.maxHeight="0px"
+    function menutoggle(){
+        if(MenuItems.style.maxHeight=="0px" )
+    {
+        MenuItems.style.maxHeight="200px"
+
+    }
+    else{
+        MenuItems.style.maxHeight="0px"
+    }
+    }
+ </script>
+</body>
+</html>
